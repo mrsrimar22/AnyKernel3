@@ -12,7 +12,7 @@ do.cleanup=1
 do.cleanuponabort=0
 device.name1=spes
 device.name2=spesn
-supported.versions=13.0-14.0
+supported.versions=13.0-15.0
 supported.patchlevels=
 supported.vendorpatchlevels=
 '; } # end properties
@@ -26,8 +26,8 @@ set_perm_recursive 0 0 750 750 $RAMDISK/init* $RAMDISK/sbin;
 } # end attributes
 
 # boot shell variables
-BLOCK=boot;
-IS_SLOT_DEVICE=auto;
+BLOCK=/dev/block/by-name/boot;
+IS_SLOT_DEVICE=1;
 RAMDISK_COMPRESSION=auto;
 PATCH_VBMETA_FLAG=auto;
 
